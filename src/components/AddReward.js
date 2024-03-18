@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useNavigate } from 'react-router-dom'
 import Header from './Header'
 import PoweredBy from './PoweredBy'
@@ -8,12 +8,12 @@ function AddReward() {
     const navigate = useNavigate();
 
     function navigateLoader() {
-        navigate('/loader') 
+        navigate('/loader')
     }
 
     return (
         <div>
-            <Header/>
+            <Header />
             <div className='add-reward-sec'>
                 <h3>Add Loyalty Cards to Wallet</h3>
                 <p>Securely store loyalty cards for quick access</p>
@@ -22,7 +22,7 @@ function AddReward() {
                     <p>My Loyalty Cards</p>
                     <div className='select-all'>
                         <div className="custom-checkbox">
-                            <input type="checkbox" id="selectAll" defaultChecked/>
+                            <input type="checkbox" id="selectAll" defaultChecked />
                             <label htmlFor="selectAll">Select All</label>
                         </div>
                     </div>
@@ -65,16 +65,19 @@ function AddReward() {
                             <span>IndusInd Bank</span>
                         </div>
                         <p className='card-error-msg'>IndusInd bank card do not support adding the
-                        reward card to Google wallet at the moment</p>
+                            reward card to Google wallet at the moment</p>
                     </div>
-                    
+
                 </div>
             </div>
-            
-            <PoweredBy/>
+
+            <PoweredBy />
 
             <div className='ftr-btn-sec'>
-                <button onClick={navigateLoader} className='comman-btn'>Add to wallet</button>
+                <button onClick={navigateLoader} className='comman-btn'>
+                    <img src="images/google-wallet-icon.png" alt="" />
+                    Add to Google wallet
+                </button>
             </div>
 
         </div>

@@ -44,6 +44,7 @@ const Otp = () => {
 							numInputs={6}
 							renderSeparator={<span> </span>}
 							renderInput={(props) => <input {...props} />}
+							inputStyle={{backgroundColor: '#DBE8FD', border: '1px solid #DBE8FD'}}
 						/>
 					</div>
 					<button disabled={loading} onClick={(e) => {

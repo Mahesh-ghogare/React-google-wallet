@@ -1,8 +1,9 @@
-body{
+body {
   background: #DAE1ED;
   font-family: 'Metropolis', sans-serif;
 }
-.main-wrapper{
+
+.main-wrapper {
   max-width: 428px;
   background: #fff;
   margin: auto;
@@ -14,14 +15,15 @@ body{
 }
 
 /********Add mobile number component css*******/
-.verify-mobile-num-sec h3{
+.verify-mobile-num-sec h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 38px;
   margin: 0px;
   margin-bottom: 10px;
 }
-.verify-mobile-num-sec p{
+
+.verify-mobile-num-sec p {
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -29,6 +31,7 @@ body{
   margin-top: 0px;
   margin-bottom: 15px;
 }
+
 .contry-code {
   display: flex;
   align-items: center;
@@ -39,26 +42,31 @@ body{
   border-radius: 6px;
   width: 20%;
 }
+
 p.err-msg {
   color: red;
   font-size: 12px;
   font-weight: 400;
   margin-left: 22%;
 }
-.contry-code span{
+
+.contry-code span {
   font-size: 18px;
   font-weight: 500;
 }
-.verify-mobile-num-sec .form-group{
+
+.verify-mobile-num-sec .form-group {
   position: relative;
   width: 80%;
 }
+
 .verify-mobile-num-sec .form-group input {
   padding: 16px 15px;
   border: 1px solid #9f9f9f;
   border-radius: 6px;
 }
-.verify-mobile-num-sec .form-group input:focus{
+
+.verify-mobile-num-sec .form-group input:focus {
   box-shadow: none;
   border: 1px solid #686868;
 }
@@ -72,12 +80,14 @@ p.err-msg {
   left: 10px;
   top: -5px;
 }
+
 .form-outer {
   display: flex;
   align-items: center;
   gap: 10px;
   width: 100%;
 }
+
 .verify-mobile-num-sec .form-group input {
   padding: 16px 15px;
   border: 1px solid #9f9f9f;
@@ -89,21 +99,7 @@ p.err-msg {
   width: 100%;
 }
 
-/* a.comman-btn {
-  width: 100%;
-  padding: 14px 20px;
-  background: #1973E8;
-  border: 1px solid #1973E8;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #f6f6f6;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-} */
-.comman-btn {
+button.comman-btn {
   width: 100%;
   padding: 14px 20px;
   background: #1973E8;
@@ -121,12 +117,14 @@ p.err-msg {
   justify-content: center;
   margin-top: 45px;
 }
+
 .powered-by-sec p {
   margin: 0px;
   font-size: 12px;
   color: #868686;
   margin-right: 5px;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -140,23 +138,25 @@ input[type=number] {
 }
 
 /*******Header component css********/
-.top-header{
+.top-header {
   padding: 13px 0px;
 }
-.top-header img{
+
+.top-header img {
   width: 25px;
   cursor: pointer;
 }
 
 /********OTP component css********/
 .otp-form-outer {
-    margin-top: 20px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
+
 .otp-form-outer input {
   width: 45px !important;
   height: 45px;
@@ -170,16 +170,22 @@ input[type=number] {
   color: #010101;
   margin: 0 3px;
 }
-.otp-form-outer input:focus{
+.inputStyle:focus-visible{
+  border: 1px solid #007FFF !important;
+}
+
+.otp-form-outer input:focus {
   box-shadow: none;
 }
-p.resend-otp{
+
+p.resend-otp {
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   color: #464646;
 }
-p.resend-otp span{
+
+p.resend-otp span {
   font-weight: 600;
   font-size: 15px;
   color: #000;
@@ -188,14 +194,15 @@ p.resend-otp span{
 
 
 /***********Add reward screen css**************/
-.add-reward-sec h3{
+.add-reward-sec h3 {
   font-weight: 500;
   font-size: 24px;
   line-height: 38px;
   margin: 0px;
   margin-bottom: 10px;
 }
-.add-reward-sec p{
+
+.add-reward-sec p {
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
@@ -203,6 +210,7 @@ p.resend-otp span{
   margin-top: 0px;
   margin-bottom: 15px;
 }
+
 .my-loyalty-card-head {
   display: flex;
   align-items: stretch;
@@ -210,35 +218,43 @@ p.resend-otp span{
   margin-bottom: 25px;
   margin-top: 25px;
 }
-.my-loyalty-card-head p{
+
+.my-loyalty-card-head p {
   margin-bottom: 0px;
 }
+
 .select-all {
   display: flex;
   align-items: center;
 }
+
 .my-loyalty-card-head p {
   font-size: 16px;
   font-weight: 500;
   color: #000;
 }
+
 .card-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
+
 .card-item img {
   width: 38px;
   margin-right: 15px;
 }
+
 .not-supported-card {
   opacity: 0.5;
 }
+
 .not-supported-card img {
   width: 38px;
   margin-right: 15px;
 }
+
 p.card-error-msg {
   color: #D93025 !important;
   font-size: 14px;
@@ -246,18 +262,28 @@ p.card-error-msg {
   line-height: 22px;
   margin-top: 10px;
 }
+
 .ftr-btn-sec {
   position: absolute;
   width: 100%;
-  bottom: 20px;
+  bottom: 15px;
   left: 0px;
   text-align: center;
   border-top: 1px solid #E5E5E5;
   padding-top: 10px;
 }
-.ftr-btn-sec .comman-btn{
-  width: 90%;
-  margin-left: 5%;
+
+.ftr-btn-sec .comman-btn {
+  background: #1F1F1F;
+  border: 1px solid #1F1F1F;
+  width: 70%;
+  border-radius: 35px;
+  padding: 12px 15px;
+}
+
+.ftr-btn-sec .comman-btn img {
+  width: 25px;
+  margin-right: 7px;
 }
 
 
@@ -290,7 +316,8 @@ p.card-error-msg {
   margin-right: 5px;
   border-radius: 3px;
 }
-.custom-checkbox input:checked + label:after {
+
+.custom-checkbox input:checked+label:after {
   content: '';
   display: block;
   position: absolute;
@@ -302,7 +329,8 @@ p.card-error-msg {
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.custom-checkbox input:checked + label:before {
+
+.custom-checkbox input:checked+label:before {
   background: #007FFF;
   border: 2px solid #007FFF;
 }
@@ -315,6 +343,7 @@ p.card-error-msg {
   justify-content: center;
   flex-direction: column;
 }
+
 .loader-inner h3 {
   font-size: 20px;
   font-weight: 500;
@@ -323,6 +352,7 @@ p.card-error-msg {
   margin-top: 20px;
   margin-bottom: 0px;
 }
+
 .loader-inner p {
   font-size: 16px;
   font-weight: 400;
@@ -330,43 +360,81 @@ p.card-error-msg {
   color: #5F6368;
 }
 
+
+.spinner-outer{
+  position: relative;
+}
+
+.spinner {
+  width: 110px;
+  height: 110px;
+  border: 5px solid #DBE8FD;
+  border-top-color: #1973E8;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+img.lock-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /*********Not loayalty part Error screen css**********/
 .error-panel {
   border: 1px solid #E5E5E5;
   border-radius: 8px;
 }
+
 .error-panel-body {
   display: flex;
   align-items: center;
   padding: 20px;
 }
-.error-panel-body img{
+
+.error-panel-body img {
   margin-right: 20px;
 }
-.error-panel-body p{
+
+.error-panel-body p {
   color: #D93025;
   font-size: 16;
   font-weight: 500;
   line-height: 24px;
   margin: 0px;
 }
+
 .error-panel-footer {
   background: #d2fad2;
   padding: 10px;
   display: flex;
   align-items: center;
 }
-.error-panel-footer img{
+
+.error-panel-footer img {
   width: 80px;
   margin-right: 10px;
 }
-.error-panel-footer p{
+
+.error-panel-footer p {
   color: #000;
   font-size: 12px;
   font-weight: 500;
   line-height: 20px;
   margin: 0px;
 }
+
 .go-back-btn {
   width: 50%;
   margin: 0 auto;

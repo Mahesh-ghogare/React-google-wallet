@@ -4,7 +4,10 @@ function Loader() {
     return (
         <div>
             <div className="loader-inner">
-                <img src="images/Loading.svg" alt="" />
+                <div className="spinner-outer">
+                    <div class="spinner"></div>
+                    <img className='lock-icon' src="images/lock-icon.png" alt="" />
+                </div>
                 <h3>Adding Loyalty Cards</h3>
                 <p>Please don’t leave or close the app </p>
             </div>
