@@ -3,6 +3,7 @@ import Header from './Header'
 import PoweredBy from './PoweredBy'
 
 function NotLoyaltyPart() {
+
   return (
     <div>
       <Header />

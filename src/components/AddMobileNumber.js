@@ -2,20 +2,12 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Header from './Header'
 import PoweredBy from './PoweredBy'
+import { BASE_API_URL } from '../constants';
+import { navigateOtp } from '../api.actions';
 
 function AddMobileNumber() {
 
 	const navigate = useNavigate();
-	function navigateOtp() {
-		fetch('https://fakestoreapi.com/products/1', {
-			mobileNumber
-		})
-			.then(res => res.json())
-			.then(json => {
-				console.log(json)
-				navigate('/otp')
-			})
-	}
 
 	const [mobileNumber, setMobileNumber] = useState('');
 	const [isValid, setIsValid] = useState(true);
@@ -60,7 +52,7 @@ function AddMobileNumber() {
 
 					<button onClick={(e) => {
 						e.preventDefault();
-						navigateOtp()
+						navigateOtp({mobileNumber,onSuccessCallback: () => navigate('/otp')})
 					}} className='comman-btn mt-5'>Send OTP</button>
 				</form>
 			</div>

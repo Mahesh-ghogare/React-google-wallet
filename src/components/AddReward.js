@@ -2,13 +2,21 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom'
 import Header from './Header'
 import PoweredBy from './PoweredBy'
+import { BASE_API_URL } from '../constants';
 
 
 function AddReward() {
     const navigate = useNavigate();
 
     function navigateLoader() {
-        navigate('/loader')
+        fetch(`${BASE_API_URL}/gw/create-loyalty-pass`, {
+
+        })
+            .then(res => res.json())
+            .then(json => {
+                console.log(json)
+                navigate('/loader');
+            })
     }
 
     return (

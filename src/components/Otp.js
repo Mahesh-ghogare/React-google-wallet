@@ -3,15 +3,30 @@ import OtpInput from 'react-otp-input';
 import { useNavigate } from 'react-router-dom'
 import Header from './Header'
 import PoweredBy from './PoweredBy'
+import { BASE_API_URL } from '../constants';
 
 const Otp = () => {
 	const [otp, setOtp] = useState('');
 	const navigate = useNavigate();
 	const [loading, setLoading] = useState(false);
+	const parsedData = JSON.parse(localStorage.getItem('reqOtpRes'));
+	const { data } = parsedData;
+	const [time, setTime] = useState(data?.countdown_timer);
+
+	useEffect(() => {
+		const intvl = setInterval(() => {
+			if (time !== 0) {
+				setTime(time - 1);
+			} else {
+				clearInterval(intvl);
+			}
+		}, 1000);
+		return () => clearInterval(intvl)
+	}, [time])
 
 	const handleNavigate = useCallback(() => {
 		setLoading(true);
-		fetch('https://fakestoreapi.com/products/1', {
+		fetch(`${BASE_API_URL}/gw/validate-otp`, {
 			otp
 		})
 			.then(res => res.json())
@@ -44,14 +59,20 @@ const Otp = () => {
 							numInputs={6}
 							renderSeparator={<span> </span>}
 							renderInput={(props) => <input {...props} />}
-							inputStyle={{backgroundColor: '#DBE8FD', border: '1px solid #DBE8FD'}}
+						// inputStyle={{backgroundColor: '#DBE8FD', border: '1px solid #DBE8FD'}}
 						/>
 					</div>
+
+					{/* <p className='timer'>{time}</p> */}
+					<p className='resend-otp'>Didn’t recieved OTP <span>Resend</span></p>
+
 					<button disabled={loading} onClick={(e) => {
 						e.preventDefault();
 						handleNavigate()
 					}} className='comman-btn'>{loading ? 'Please wait...' : 'Submit'}</button>
 				</form>
+
+
 
 				<PoweredBy />
 			</div>
