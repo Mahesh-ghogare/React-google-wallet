@@ -1,1 +1,1 @@
-export const BASE_API_URL = window.location.origin;
+export const BASE_API_URL = `https://api.beta.twidapp.com`;

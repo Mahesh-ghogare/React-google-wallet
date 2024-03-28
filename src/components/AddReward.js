@@ -10,7 +10,7 @@ function AddReward() {
 
     function navigateLoader() {
         fetch(`${BASE_API_URL}/gw/create-loyalty-pass`, {
-
+            
         })
             .then(res => res.json())
             .then(json => {

@@ -4,12 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import Header from './Header'
 import PoweredBy from './PoweredBy'
 import { BASE_API_URL } from '../constants';
+import { navigateOtp } from '../api.actions';
 
 const Otp = () => {
 	const [otp, setOtp] = useState('');
 	const navigate = useNavigate();
 	const [loading, setLoading] = useState(false);
 	const parsedData = JSON.parse(localStorage.getItem('reqOtpRes'));
+	const mobileNumber = localStorage.getItem('mobileNumber');
 	const { data } = parsedData;
 	const [time, setTime] = useState(data?.countdown_timer);
 
@@ -63,8 +65,7 @@ const Otp = () => {
 						/>
 					</div>
 
-					{/* <p className='timer'>{time}</p> */}
-					<p className='resend-otp'>Didn’t recieved OTP <span>Resend</span></p>
+					<p className='resend-otp' style={{opacity: time === 0 ? 1:0.5 }} onClick={()=> time === 0 && navigateOtp({mobileNumber})}>Didn’t recieved OTP <span>Resend</span></p>
 
 					<button disabled={loading} onClick={(e) => {
 						e.preventDefault();

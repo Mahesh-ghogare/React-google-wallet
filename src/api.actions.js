@@ -6,16 +6,8 @@ export function navigateOtp({mobileNumber, onSuccessCallback = () => {}}) {
         mobileNumber
     })
         .then(res => res.json())
-        .then(json => {
-            console.log(json)
-            const resData = {
-                "status": true,
-                "message": "We have sent an OTP to your mobile number 9898989803!",
-                "error_code": 0,
-                "data": {
-                    "countdown_timer": 120
-                }
-            }
+        .then(resData => {
+            console.log(resData)
             const {status, message, error_code, data } = resData;
             localStorage.setItem('reqOtpRes', JSON.stringify(resData))
             localStorage.setItem('mobileNumber', mobileNumber)
@@ -33,7 +25,9 @@ export function navigateOtp({mobileNumber, onSuccessCallback = () => {}}) {
             localStorage.setItem('reqOtpRes', JSON.stringify(resData))
             localStorage.setItem('mobileNumber', mobileNumber)
             onSuccessCallback()
+            
         })
 
 }
+
 
